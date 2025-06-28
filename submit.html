@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submit Jokes</title>
+  <style>
+    body {
+      background-color: #181818;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 300px;
+    }
+
+    input, textarea, button {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    button {
+      background-color: #1DB954;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #17a044;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Submit Two Jokes</h2>
+
+  <form action="https://formsubmit.co/fire2022fire@gmail.com" method="POST">
+    <input type="text" name="First Text" placeholder="First text which will be send" required>
+    <textarea name="Second Text" placeholder="Second text which will be send" rows="4" required></textarea>
+
+    <!-- Optional hidden fields -->
+    <input type="hidden" name="_subject" value="New Joke Submission!">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button type="submit">Send</but
